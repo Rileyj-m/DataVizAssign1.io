@@ -15,13 +15,12 @@
 
 <!--Load d3.js-->
 <script src="http://d3js.org/d3.v4.js"></script>
-
-<!-- Create div where the graph will take place -->
+<body>
+    <!-- Create div where the graph will take place -->
 <h4>Hypothesis: <h5>Songs in the Spotify weekly charts stay the longest on the weekly charts when they have the most danceability.</h5></h4>
 <div id="my_dataviz"></div>
-<div><h5></h5></div>
 <div id="my_datavizhist"></div>
-
+</body>
 <script>
     // 1== major
     // set the dimensions and margins of the graph
@@ -94,11 +93,6 @@
         svg.append("text").attr("x", width / 2+ 165).attr("y", 25).text("Major Scale").style("font-size", "10pt" ).attr("alignment-baseline","middle")
         svg.append("text").attr("x", width / 2+ 165).attr("y", 45).text("Minor Scale").style("font-size", "10pt",).attr("alignment-baseline","middle")
     })
-
-    // set the dimensions and margins of the graph
-    var margin = {top: 10, right: 30, bottom: 40, left: 60},
-        width = 520 - margin.left - margin.right,
-        height = 520 - margin.top - margin.bottom;
     
     // append the svg object to the body of the page
     var svg2 = d3.select("#my_datavizhist")
@@ -165,3 +159,4 @@
             .style("fill", "#69b3a2")
     });
 </script>
+</html>
